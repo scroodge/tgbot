@@ -14,6 +14,8 @@ def get_text_messages(message):
      
 while True:
         try:
-            bot.polling(none_stop=True)
+            #bot.polling(none_stop=True)
+            #bot.infinity_polling()
+            bot.polling(none_stop=True, interval=0, timeout=20)
         except Exception as ex:
             logger.error(ex)
